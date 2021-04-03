@@ -501,9 +501,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  19.98
-    #define DEFAULT_Ki  1.88
-    #define DEFAULT_Kd  53.21
+    #define DEFAULT_Kp  27.93
+    #define DEFAULT_Ki  4.21
+    #define DEFAULT_Kd  46.32
   #endif
 #endif // PIDTEMP
 
@@ -743,7 +743,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { (200*16)/(2.0*20), (200*16)/(2.0*20), (200*16)/4.0, /*(200 * 16)/(6.2 * 3.1416)*//*161.07*/94.88}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { (200*16)/(2.0*20), (200*16)/(2.0*20), (200*16)/4.0, /*(200 * 16)/(6.2 * 3.1416)*//*161.07*//*94.88*/97.313}
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1092,11 +1092,11 @@
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 
-// @section extruder
+// @section extruderx
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
-#define INVERT_E1_DIR true
+#define INVERT_E0_DIR false
+#define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false
@@ -1124,7 +1124,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
+#define X_BED_SIZE 194
 #define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -1133,7 +1133,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS (178)
+#define Z_MAX_POS (180)
 
 /**
  * Software Endstops
